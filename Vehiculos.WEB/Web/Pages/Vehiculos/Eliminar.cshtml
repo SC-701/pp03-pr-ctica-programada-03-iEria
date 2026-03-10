@@ -1,0 +1,82 @@
+﻿@page
+@model Web.Pages.Vehiculos.EliminarModel
+@{
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Eliminar Vehículo</h2>
+
+    <div class="row">
+        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10">
+
+            <form method="post">
+                <dl class="row">
+
+                    <dt class="col-sm-5">
+                        @Html.DisplayNameFor(model => model.vehiculo.Marca):
+                    </dt>
+                    <dd class="col-sm-7">
+                        @Html.DisplayFor(model => model.vehiculo.Marca)
+                    </dd>
+
+                    <dt class="col-sm-5">
+                        @Html.DisplayNameFor(model => model.vehiculo.Modelo):
+                    </dt>
+                    <dd class="col-sm-7">
+                        @Html.DisplayFor(model => model.vehiculo.Modelo)
+                    </dd>
+
+                    <dt class="col-sm-5">
+                        @Html.DisplayNameFor(model => model.vehiculo.Placa):
+                    </dt>
+                    <dd class="col-sm-7">
+                        @Html.DisplayFor(model => model.vehiculo.Placa)
+                    </dd>
+
+                    <dt class="col-sm-5">
+                        @Html.DisplayNameFor(model => model.vehiculo.Anio):
+                    </dt>
+                    <dd class="col-sm-7">
+                        @Html.DisplayFor(model => model.vehiculo.Anio)
+                    </dd>
+
+                    <dt class="col-sm-5">
+                        @Html.DisplayNameFor(model => model.vehiculo.Color):
+                    </dt>
+                    <dd class="col-sm-7">
+                        @Html.DisplayFor(model => model.vehiculo.Color)
+                    </dd>
+
+                    <dt class="col-sm-5">
+                        @Html.DisplayNameFor(model => model.vehiculo.CorreoPropietario):
+                    </dt>
+                    <dd class="col-sm-7">
+                        @Html.DisplayFor(model => model.vehiculo.CorreoPropietario)
+                    </dd>
+
+                    <dt class="col-sm-5">
+                        @Html.DisplayNameFor(model => model.vehiculo.TelefonoPropietario):
+                    </dt>
+                    <dd class="col-sm-7">
+                        @Html.DisplayFor(model => model.vehiculo.TelefonoPropietario)
+                    </dd>
+
+                </dl>
+
+                <div class="d-flex gap-2">
+                    <a class="btn btn-primary" asp-page="./Index">Cancelar</a>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </div>
+
+                <input type="hidden" asp-for="vehiculo.Marca" />
+                <input type="hidden" asp-for="vehiculo.Modelo" />
+                <input type="hidden" asp-for="vehiculo.Placa" />
+                <input type="hidden" asp-for="vehiculo.TelefonoPropietario" />
+                <input type="hidden" asp-for="vehiculo.CorreoPropietario" />
+                <input type="hidden" asp-for="vehiculo.Color" />
+                <input type="hidden" asp-for="vehiculo.Anio" />
+            </form>
+
+        </div>
+    </div>
+</div>
